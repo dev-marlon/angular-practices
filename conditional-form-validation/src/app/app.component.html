@@ -1,0 +1,46 @@
+<h1>Conditional Form Validation</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ng-container formGroupName="email">
+        <div>
+            <label for="isActive">E-Mail</label>
+            <input id="isActive" type="checkbox" formControlName="isActive">
+        </div>
+        <div>
+            <label for="recipient">Recipient</label>
+            <input id="recipient" type="text" formControlName="recipient">
+            <span
+                *ngIf="form.get('email.recipient').hasError('required')">
+                Invalid
+            </span>
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" formControlName="subject">
+            <span
+                *ngIf="form.get('email.subject').hasError('required')">
+                Invalid
+            </span>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" formControlName="message">
+            </textarea>
+            <span
+                *ngIf="form.get('email.message').hasError('required')">
+                Invalid
+            </span>
+        </div>
+        <div>
+            <label></label>
+            <button type="submit">
+                Send
+            </button>
+        </div>
+    </ng-container>
+</form>
+
+Value: {{ form.value | json }}
+Valid: {{ form.valid | json }}
+
+

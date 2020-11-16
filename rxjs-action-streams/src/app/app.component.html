@@ -1,0 +1,29 @@
+<section>
+    <div>
+        Max age:
+        <input
+            type="range"
+            min="25"
+            max="50"
+            step="5"
+            [formControl]="maxAgeFormControl"> {{ maxAgeFormControl.value }}
+    </div>
+    <div>
+        Min perfection points:
+        <input
+            type="range"
+            min="10"
+            max="100"
+            step="10"
+            [formControl]="perfectionPointsFormControl"> {{ perfectionPointsFormControl.value }}
+    </div>
+</section>
+<section *ngIf="viewModel$ | async as viewModel">
+    <article *ngFor="let opossum of viewModel.opossums">
+        <strong>{{ opossum.name }}</strong><br>
+        <small>
+            Age: {{ opossum.age }}<br>
+            Perfection: {{ opossum.perfectionPoints }}
+        </small>
+    </article>
+</section>

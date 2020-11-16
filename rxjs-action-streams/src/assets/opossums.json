@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Günther",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 100,
+    "age": 32
+  },
+  {
+    "name": "Stefan",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 75,
+    "age": 24
+  },
+  {
+    "name": "Ulf",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 100,
+    "age": 24
+  },
+  {
+    "name": "Bernd",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 80,
+    "age": 29
+  },
+  {
+    "name": "Frank",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 90,
+    "age": 46
+  },
+  {
+    "name": "Heinz",
+    "type": "didelphisAlbiventris",
+    "perfectionPoints": 50,
+    "age": 21
+  }
+]
